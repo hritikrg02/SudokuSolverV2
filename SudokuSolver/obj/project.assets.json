@@ -19,9 +19,15 @@
       "packagesPath": "/Users/hritikgupta/.nuget/packages/",
       "outputPath": "/Users/hritikgupta/Personal Projects/C#/SudokuSolver/SudokuSolver/SudokuSolver/obj/",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/hritikgupta/.nuget/NuGet/NuGet.Config"
+      ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
