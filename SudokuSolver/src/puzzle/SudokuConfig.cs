@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.24.1
+// version: 2022.1.24.2
 
 namespace SudokuSolver.Puzzle;
 
@@ -12,9 +12,10 @@ using System.IO;
 /// <summary>
 /// Represents a configuration of a Sudoku puzzle.
 /// </summary>
-public class SudokuConfig : IConfiguration{
+public class SudokuConfig : IConfiguration {
     
     public const char Empty = '-';
+    public const char Separator = '|';
     public const int AsciiConst = 48;
     
     private static int s_dim;
@@ -146,14 +147,14 @@ public class SudokuConfig : IConfiguration{
             for (var col = 0; col < s_dim; col++) {
                 
                 if (col % subDim == 0) {
-                    output.Append("| ");
+                    output.Append(Separator + " ");
                 }
                 
                 output.Append(_board[row, col]);
                 output.Append(' ');
             }
 
-            output.Append('|');
+            output.Append(Separator);
             output.AppendLine();
         }
         
