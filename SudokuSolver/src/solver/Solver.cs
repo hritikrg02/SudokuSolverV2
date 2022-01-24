@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.22.1
+// version: 2022.1.24.1
 
 namespace SudokuSolver.Solver; 
 
@@ -10,7 +10,7 @@ public class Solver {
     /// <summary>
     /// Number of configs that have been generated.
     /// </summary>
-    private long _numConfigs = 0;
+    private long _numConfigs;
     
     /// <summary>
     /// Property for the number of configs that have been generated.
@@ -34,11 +34,12 @@ public class Solver {
 
         foreach (var child in config.GetSuccessors()) {
             NumConfigs++;
-            if (child.IsValid()) {
-                var sol = Solve(child);
-                if (sol.Any()) {
-                    return sol;
-                }
+            if (!child.IsValid()) {
+                continue;
+            }
+            var sol = Solve(child);
+            if (sol.Any()) {
+                return sol;
             }
         }
 
