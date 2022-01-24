@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.22.1.2
+// version: 2022.1.23.2
 
 namespace SudokuSolver.Puzzle;
 
