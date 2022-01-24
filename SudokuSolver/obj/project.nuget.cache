@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "89w75MKaeOqnW0h3hDfirSQnJp/rpGhwAEMh7v8+jFes6qAxXOY9a9CFwjcNSRSaCL9PpGBAognxyJWp9dehZQ==",
+  "dgSpecHash": "vvPjCyYC8qIXmRej5VRNrmM30Mun6OskajoyAnIkvydgbHTW39TyHiuKpR0YmHWvrFlJaKXEAHBOquJ5aaV4tg==",
   "success": true,
-  "projectFilePath": "/Users/hritikgupta/Personal Projects/C#/SudokuSolver/SudokuSolver/SudokuSolver/SudokuSolver.csproj",
+  "projectFilePath": "/Users/hritikgupta/Personal Projects/C#/SudokuSolver/SudokuSolver/SudokuSolver.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
