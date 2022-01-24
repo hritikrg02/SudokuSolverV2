@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.24.2
+// version: 2022.1.24.3
 
 namespace SudokuSolver.Puzzle;
 
@@ -36,7 +36,7 @@ public class SudokuConfig : IConfiguration {
 
     public SudokuConfig(SudokuConfig other) {
         _board = new char[s_dim, s_dim];
-        _board = other._board.Clone() as char[,];
+        _board = other._board.Clone() as char[,] ?? throw new Exception("cloning failed.");
     }
 
     public ICollection<IConfiguration> GetSuccessors() {
