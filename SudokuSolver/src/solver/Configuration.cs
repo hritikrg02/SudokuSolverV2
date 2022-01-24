@@ -25,10 +25,4 @@ public interface IConfiguration {
     /// </summary>
     /// <returns>true if config is valid, false otherwise</returns>
     bool IsValid();
-    
-    /// <summary>
-    /// Converts the config of any puzzle into a string representation
-    /// </summary>
-    /// <returns>string representation of a given config</returns>
-    string ConvertToString();
 }
