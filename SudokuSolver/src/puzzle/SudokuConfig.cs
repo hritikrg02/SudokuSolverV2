@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.23.2
+// version: 2022.1.23.3
 
 namespace SudokuSolver.Puzzle;
 
@@ -23,7 +23,7 @@ public class SudokuConfig : IConfiguration{
 
     public SudokuConfig(string path) {
         using (var sr = File.OpenText(path)) {
-            _sDim = sr.Read();
+            _sDim = int.Parse(sr.ReadLine());
             _board = new char[_sDim, _sDim];
 
             for (var row = 0; row < _sDim; row++) {
@@ -50,7 +50,7 @@ public class SudokuConfig : IConfiguration{
                     continue;
                 }
                 
-                for (var i = 0; i <= _sDim; i++) {
+                for (var i = 1; i <= _sDim; i++) {
                     var successor = new SudokuConfig(this);
                     successor._board[row, col] = Convert.ToChar(i + AsciiConst);
                     successors.Add(successor);
@@ -121,11 +121,11 @@ public class SudokuConfig : IConfiguration{
 
     private bool CheckSubBoard(int row, int col) {
         var subBoard = new StringBuilder();
-        var subDim = Math.Sqrt(_sDim);
+        var subDim = Convert.ToInt32(Math.Sqrt(_sDim));
 
         for (var subRow = 0; subRow < subDim; subRow++) {
             for (var subCol = 0; subCol < subDim; subCol++) {
-                subBoard.Append(_board[(row * _sDim) + subRow, (col * _sDim) + subCol]);
+                subBoard.Append(_board[(row * subDim) + subRow, (col * subDim) + subCol]);
             }
         }
 
