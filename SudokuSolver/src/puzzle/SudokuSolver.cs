@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.23.2
+// version: 2022.1.24.1
 
 namespace SudokuSolver.Puzzle;
 
@@ -13,6 +13,7 @@ public class SudokuSolver {
     public static void Main(string[] args) {
         if (args.Length != 1) {
             Console.WriteLine("Usage: dotnet run path");
+            return;
         }
         
         Console.WriteLine("Starting solver...");
