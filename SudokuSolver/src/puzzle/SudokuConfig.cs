@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.23.3
+// version: 2022.1.23.4
 
 namespace SudokuSolver.Puzzle;
 
@@ -141,12 +141,13 @@ public class SudokuConfig : IConfiguration{
 
     public override string ToString() {
         var output = new StringBuilder();
+        var subDim = Convert.ToInt32(Math.Sqrt(_sDim));
         output.AppendLine();
         
         for (var row = 0; row < _sDim; row++) {
             for (var col = 0; col < _sDim; col++) {
                 
-                if (col % 3 == 0) {
+                if (col % subDim == 0) {
                     output.Append("| ");
                 }
                 
