@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.24.3
+// version: 2022.1.25.1
 
 namespace SudokuSolver.Puzzle;
 
@@ -23,11 +23,12 @@ public class SudokuConfig : IConfiguration {
 
     public SudokuConfig(string path) {
         using var sr = File.OpenText(path);
-        s_dim = int.Parse(sr.ReadLine());
+        s_dim = int.Parse(sr.ReadLine() ?? throw new IOException("file read-in failed."));
         _board = new char[s_dim, s_dim];
 
         for (var row = 0; row < s_dim; row++) {
-            var rowValues = sr.ReadLine().Split();
+            var line = sr.ReadLine() ?? throw new IOException("file read-in failed.");
+            var rowValues = line.Split();
             for (var col = 0; col < s_dim; col++) {
                 _board[row, col] = char.Parse(rowValues[col]);
             }
