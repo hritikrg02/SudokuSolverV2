@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.24.1
+// version: 2022.1.26.1
 
 namespace SudokuSolver.Solver; 
 
@@ -8,16 +8,11 @@ namespace SudokuSolver.Solver;
 /// </summary>
 public class Solver {
     /// <summary>
-    /// Number of configs that have been generated.
-    /// </summary>
-    private long _numConfigs;
-    
-    /// <summary>
     /// Property for the number of configs that have been generated.
     /// </summary>
     public long NumConfigs {
-        get => _numConfigs;
-        private set => _numConfigs = value;
+        get;
+        private set;
     }
     
     /// <summary>
