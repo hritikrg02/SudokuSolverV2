@@ -1,5 +1,5 @@
 // author: Hritik "Ricky" Gupta
-// version: 2022.1.26.1
+// version: 2022.1.26.2
 
 namespace SudokuSolver.Solver; 
 
@@ -22,9 +22,7 @@ public class Solver {
     /// <returns></returns>
     public List<IConfiguration> Solve(IConfiguration config) {
         if (config.IsSolution()) {
-            var optional = new List<IConfiguration>();
-            optional.Add(config);
-            return optional;
+            return new List<IConfiguration>() {config};
         }
 
         foreach (var child in config.GetSuccessors()) {
