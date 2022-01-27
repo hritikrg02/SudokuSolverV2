@@ -17,7 +17,7 @@ public interface IConfiguration {
     /// <summary>
     /// Finds all possible next iterations of the puzzle, valid or not.
     /// </summary>
-    /// <returns>ICollection of configs that are successors to the intial config</returns>
+    /// <returns>ICollection of configs that are successors to the initial config</returns>
     ICollection<IConfiguration> GetSuccessors();
     
     /// <summary>
